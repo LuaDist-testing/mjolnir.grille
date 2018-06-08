@@ -1,7 +1,11 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "mjolnir.grille"
-version = "0.5-2"
+-- versioning
+
+local src_version = "0.6.0"
+local pkg_version = "0"
+version = src_version .. "-" .. pkg_version
 
 -- General metadata:
 
@@ -12,13 +16,15 @@ local desc = [[
 
 -- LuaDist source
 source = {
-  tag = "0.5-2",
+  tag = "0.6.0-0",
   url = "git://github.com/LuaDist-testing/mjolnir.grille.git"
 }
 -- Original source
 -- source = {
---   url = "git://" .. url .. ".git",
+--   url = "https://" .. url .. "/archive/" .. src_version .. ".tar.gz",
+--   dir = package .. "-" .. src_version,
 -- }
+
 description = {
   summary = desc,
   detailed = desc,
@@ -31,10 +37,7 @@ description = {
 supported_platforms = {"macosx"}
 dependencies = {
   "lua >= 5.2",
-  "mjolnir.fnutils",
-  "mjolnir.application",
-  "mjolnir.alert",
-  "mjolnir.cmsj.appfinder",
+  "mjolnir.winter",
 }
 
 -- Build rules:
