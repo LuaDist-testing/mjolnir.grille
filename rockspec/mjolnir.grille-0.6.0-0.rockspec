@@ -1,7 +1,9 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "mjolnir.grille"
-version = "0.5-1"
+-- versioning
+
+local src_version = "0.6.0"
+local pkg_version = "0"
+version = src_version .. "-" .. pkg_version
 
 -- General metadata:
 
@@ -10,16 +12,11 @@ local desc = [[
   A module for moving/resizing your windows along a virtual and horizontal grid(s), using a fluent interface.
 ]]
 
--- LuaDist source
 source = {
-  tag = "0.5-1",
-  url = "git://github.com/LuaDist-testing/mjolnir.grille.git"
+  url = "https://" .. url .. "/archive/" .. src_version .. ".tar.gz",
+  dir = package .. "-" .. src_version,
 }
--- Original source
--- source = {
---   url = "git://" .. url,
---   tag = version,
--- }
+
 description = {
   summary = desc,
   detailed = desc,
@@ -32,10 +29,7 @@ description = {
 supported_platforms = {"macosx"}
 dependencies = {
   "lua >= 5.2",
-  "mjolnir.fnutils",
-  "mjolnir.application",
-  "mjolnir.alert",
-  "mjolnir.cmsj.appfinder",
+  "mjolnir.winter",
 }
 
 -- Build rules:
